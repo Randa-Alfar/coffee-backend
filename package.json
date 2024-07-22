@@ -9,7 +9,9 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
     "@types/node": "^20.14.10",
+    "@wdio/local-runner": "^8.39.1",
     "typescript": "^5.5.3"
   },
   "dependencies": {
@@ -20,12 +22,17 @@
     "@types/joi": "^17.2.3",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/uuid": "^10.0.0",
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "express": "^4.19.2",
     "express-joi-validation": "^5.0.1",
     "knex": "^3.1.0",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "nodemon": "^3.1.4",
+    "pg": "^8.12.0",
     "rimraf": "^5.0.8",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",

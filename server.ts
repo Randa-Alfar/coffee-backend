@@ -4,6 +4,7 @@ import express , { Application } from "express";
 import morgan from "morgan"
 import cors from "cors"
 import Database from "./configDB/DBConfig";
+import MenuRouter from './components/menu/menu.route'
 
 dotenv.config();
 const port = process.env.PORT;
@@ -13,9 +14,9 @@ class App {
 
     constructor(){
         this.app = express();
+        this.routes();
         this.CorsConfig();
         this.dataBase();
-        this.routes();
     }
 
     protected CorsConfig() {
@@ -35,6 +36,8 @@ class App {
 
     protected async routes(): Promise<void> {
         this.CorsConfig(); 
+
+        this.app.use("/menu-management",MenuRouter);
     }
 
     protected dataBase(): void {
