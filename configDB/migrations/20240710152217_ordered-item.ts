@@ -8,7 +8,6 @@ export async function up(knex: Knex): Promise<void> {
         table.string('item_name').unique().notNullable();
         table.float('price').notNullable(),
         table.string('currency').notNullable(),
-        table.enum('size',Object.values(size)).notNullable(),
         table.string('category').notNullable()
         // we still have to declarate img
     })
